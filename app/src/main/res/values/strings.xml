@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CSA_build</string>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="user">User</string>
+    <string name="authorization">Авторизация</string>
+    <string name="password">Пароль</string>
+    <string name="reset_password">Восстановить пароль</string>
+    <string name="n_name">Логин</string>
+    <string name="registration">Регистрация</string>
+    <string name="ruFavorites">Избранное</string>
+    <string name="catalog">Catalog</string>
+    <string name="userName">Имя пользователя</string>
+    <string name="mail">Email</string>
+    <string name="addRegistration">Зарегистрироваться</string>
+    <string name="BricsR">Кирпичные изделия</string>
+    <string name="CementR">Цемент и смеси</string>
+    <string name="GravelR">Песок и щебень</string>
+    <string name="MetalR">Металопрокат</string>
+    <string name="allCategories">Все категории</string>
+    <string name="change">Изменить</string>
+    <string name="save">Сохранить</string>
+    <string name="Theme">Темная тема</string>
+    <string name="Count">Количество</string>
+    <string name="Add">Добавить</string>
+    <string name="disqript">Приложение Каталог цен на строительные материалы</string>
+    <string name="Chosen">Выбранные товары</string>
+    <string name="card">Card</string>
+    <string name="clear">Очистить</string>
+    <string name="sum">Сумма:</string>
+</resources>
