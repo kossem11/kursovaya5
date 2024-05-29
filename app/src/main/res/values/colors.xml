@@ -8,4 +8,5 @@
     <color name="green1">#28ED3B</color>
     <color name="link">#3B57E8</color>
     <color name="red">#FA0404</color>
+    <color name="customColor">#FF000000</color>
 </resources>

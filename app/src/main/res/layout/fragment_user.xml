@@ -101,7 +101,7 @@
         android:id="@+id/textViewTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Выкл."
+        android:text="Выкл"
         android:layout_marginLeft="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonTheme"
         app:layout_constraintStart_toEndOf="@+id/buttonTheme"
