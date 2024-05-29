@@ -45,6 +45,9 @@ class ListFragment : Fragment() {
         binding.imageViewCard.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_cardFragment)
         }
+        binding.imageViewSearch.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_searchFragment)
+        }
     }
 
     fun onButtonClick(position: Int) {

@@ -28,4 +28,8 @@
     <string name="card">Card</string>
     <string name="clear">Очистить</string>
     <string name="sum">Сумма:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Search">Поиск</string>
+    <string name="back">Назад</string>
 </resources>
