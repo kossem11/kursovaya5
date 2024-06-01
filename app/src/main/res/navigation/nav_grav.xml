@@ -18,7 +18,7 @@
             app:destination="@id/homeFragment" />
         <action
             android:id="@+id/action_authorizationFragment_to_resetPasswordFragment"
-            app:destination="@id/resetPasswordFragment" />
+            app:destination="@id/ResetPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -90,9 +90,9 @@
             app:destination="@id/catalogFragment" />
     </fragment>
     <fragment
-        android:id="@+id/resetPasswordFragment"
+        android:id="@+id/ResetPasswordFragment"
         android:name="production.kossem.csa_build.ResetPasswordFragment"
-        android:label="ResetPasswordFragment" >
+        android:label="ResetPasswordFragment">
         <action
             android:id="@+id/action_resetPasswordFragment_to_authorizationFragment"
             app:destination="@id/authorizationFragment" />
