@@ -54,7 +54,7 @@ class AuthorizationFragment : Fragment() {
             .build()
 
         val request = Request.Builder()
-            .url("http://localhost:4567/login")
+            .url("http://192.168.0.103:4567/login")
             .post(formBody)
             .build()
 
