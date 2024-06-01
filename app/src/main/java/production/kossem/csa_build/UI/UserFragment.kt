@@ -1,4 +1,4 @@
-package production.kossem.csa_build
+package production.kossem.csa_build.UI
 
 import android.content.Context
 import android.content.SharedPreferences

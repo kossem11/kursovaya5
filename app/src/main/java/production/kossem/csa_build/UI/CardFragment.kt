@@ -1,14 +1,14 @@
-package production.kossem.csa_build
+package production.kossem.csa_build.UI
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import production.kossem.csa_build.UI.Adapders.MyAdapter
+import production.kossem.csa_build.UI.Adapders.MyData
 import production.kossem.csa_build.databinding.FragmentCardBinding
-import production.kossem.csa_build.databinding.FragmentListBinding
 
 
 class CardFragment : Fragment() {

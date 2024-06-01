@@ -1,4 +1,4 @@
-package production.kossem.csa_build
+package production.kossem.csa_build.UI
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel

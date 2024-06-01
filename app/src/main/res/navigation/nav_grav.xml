@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/authorizationFragment"
-        android:name="production.kossem.csa_build.AuthorizationFragment"
+        android:name="production.kossem.csa_build.UI.AuthorizationFragment"
         android:label="fragment_authorization"
         tools:layout="@layout/fragment_authorization" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="production.kossem.csa_build.HomeFragment"
+        android:name="production.kossem.csa_build.UI.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="production.kossem.csa_build.ListFragment"
+        android:name="production.kossem.csa_build.UI.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/catalogFragment"
-        android:name="production.kossem.csa_build.KatalogFragment"
+        android:name="production.kossem.csa_build.UI.KatalogFragment"
         android:label="fragment_katalog"
         tools:layout="@layout/fragment_katalog" >
         <action
@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="production.kossem.csa_build.RegistrationFragment"
+        android:name="production.kossem.csa_build.UI.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/userFragment"
-        android:name="production.kossem.csa_build.UserFragment"
+        android:name="production.kossem.csa_build.UI.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <action
@@ -91,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/ResetPasswordFragment"
-        android:name="production.kossem.csa_build.ResetPasswordFragment"
+        android:name="production.kossem.csa_build.UI.ResetPasswordFragment"
         android:label="ResetPasswordFragment">
         <action
             android:id="@+id/action_resetPasswordFragment_to_authorizationFragment"
@@ -99,7 +99,7 @@
     </fragment>
     <fragment
         android:id="@+id/cardFragment"
-        android:name="production.kossem.csa_build.CardFragment"
+        android:name="production.kossem.csa_build.UI.CardFragment"
         android:label="fragment_card"
         tools:layout="@layout/fragment_card" >
         <action
@@ -108,7 +108,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="production.kossem.csa_build.SearchFragment"
+        android:name="production.kossem.csa_build.UI.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action

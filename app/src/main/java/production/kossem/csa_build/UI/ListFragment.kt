@@ -1,16 +1,16 @@
-package production.kossem.csa_build
+package production.kossem.csa_build.UI
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import production.kossem.csa_build.R
+import production.kossem.csa_build.UI.Adapders.MyAdapter
+import production.kossem.csa_build.UI.Adapders.MyData
 import production.kossem.csa_build.databinding.FragmentListBinding
-import production.kossem.csa_build.placeholder.PlaceholderContent
 
 
 class ListFragment : Fragment() {

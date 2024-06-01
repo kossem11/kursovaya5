@@ -1,4 +1,4 @@
-package production.kossem.csa_build
+package production.kossem.csa_build.UI
 
 import android.content.Context
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.activityViewModels
 import production.kossem.csa_build.databinding.FragmentSearchBinding

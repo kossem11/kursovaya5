@@ -1,4 +1,4 @@
-package production.kossem.csa_build
+package production.kossem.csa_build.UI
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,6 +13,7 @@ import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import production.kossem.csa_build.R
 import production.kossem.csa_build.databinding.FragmentAuthorizationBinding
 import java.io.IOException
 

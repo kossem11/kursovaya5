@@ -1,4 +1,4 @@
-package production.kossem.csa_build
+package production.kossem.csa_build.UI.Adapders
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
