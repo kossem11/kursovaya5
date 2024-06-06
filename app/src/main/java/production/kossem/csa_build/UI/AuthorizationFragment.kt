@@ -1,5 +1,6 @@
 package production.kossem.csa_build.UI
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -70,6 +71,9 @@ class AuthorizationFragment : Fragment() {
             override fun onResponse(call: Call, response: Response) {
                 if (response.isSuccessful) {
                     val responseData = response.body?.string()
+                    if (responseData != null) {
+                        saveUserId(responseData.toInt())
+                    }
                     activity?.runOnUiThread {
                         findNavController().navigate(R.id.action_authorizationFragment_to_homeFragment)
                     }
@@ -80,6 +84,11 @@ class AuthorizationFragment : Fragment() {
                 }
             }
         })
+    }
+
+    private fun saveUserId(userId: Int) {
+        val sharedPreferences = activity?.getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        sharedPreferences?.edit()?.putInt("userId", userId)?.apply()
     }
 
     override fun onDestroyView() {

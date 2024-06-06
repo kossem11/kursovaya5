@@ -1,5 +1,6 @@
 package production.kossem.csa_build.UI
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,13 +10,22 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import production.kossem.csa_build.R
 import production.kossem.csa_build.UI.Adapders.MyAdapter
-import production.kossem.csa_build.UI.Adapders.MyData
 import production.kossem.csa_build.databinding.FragmentListBinding
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class ListFragment : Fragment() {
     private var _binding: FragmentListBinding? = null
     private val binding get() = _binding!!
+    private val client = OkHttpClient()
+    private var userId: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,19 +38,10 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val dataList = listOf(
-            MyData("Item 1", "Description 1"),
-            MyData("Item 2", "Description 2"),
-            MyData("Item 3", "Description 3"),
-            MyData("Item 4", "Description 4"),
-            MyData("Item 5", "Description 5"),
-            MyData("Item 6", "Description 6"),
-            MyData("Item 7", "Description 7"),
-            MyData("Item 8", "Description 8"),
-        )
+        userId = getUserId()
 
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
-        binding.recyclerView.adapter = MyAdapter(dataList)
+        fetchMaterials()
 
         binding.imageViewCard.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_cardFragment)
@@ -50,16 +51,37 @@ class ListFragment : Fragment() {
         }
     }
 
-    fun onButtonClick(position: Int) {
-        // Обработка нажатия кнопки
-        val data = (binding.recyclerView.adapter as MyAdapter).dataList[position]
-        // Например, выводим текст в лог
-        println("Button clicked in item: ${data.text1}")
+    private fun fetchMaterials() {
+        GlobalScope.launch(Dispatchers.IO) {
+            val request = Request.Builder()
+                .url("http://192.168.0.103:4567/materials")
+                .build()
+
+            val response = client.newCall(request).execute()
+            if (response.isSuccessful) {
+                val responseData = response.body?.string()
+                val gson = Gson()
+                val itemType = object : TypeToken<List<Material>>() {}.type
+                val dataList: List<Material> = gson.fromJson(responseData, itemType)
+                withContext(Dispatchers.Main) {
+                    binding.recyclerView.adapter = MyAdapter(dataList, userId)
+                }
+            } else {
+                // Обработка ошибки
+                withContext(Dispatchers.Main) {
+                    println("Failed to fetch materials: ${response.message}")
+                }
+            }
+        }
+    }
+
+    private fun getUserId(): Int {
+        val sharedPreferences = activity?.getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        return sharedPreferences?.getInt("userId", 0) ?: 0
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }
