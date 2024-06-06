@@ -36,7 +36,7 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedPreferences = requireActivity().getSharedPreferences("ThemePrefs", Context.MODE_PRIVATE)
+        /*sharedPreferences = requireActivity().getSharedPreferences("ThemePrefs", Context.MODE_PRIVATE)
         val isDarkTheme = sharedPreferences.getBoolean("isDarkTheme", false)
         setAppTheme(isDarkTheme)
 
@@ -44,7 +44,7 @@ class UserFragment : Fragment() {
             val newThemeIsDark = !isDarkTheme
             setAppTheme(newThemeIsDark)
             sharedPreferences.edit().putBoolean("isDarkTheme", newThemeIsDark).apply()
-        }
+        }*/
 
         fetchUserData()
 
