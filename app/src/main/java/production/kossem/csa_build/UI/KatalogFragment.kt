@@ -25,6 +25,10 @@ class KatalogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.allCategories.setOnClickListener {
+            findNavController().navigate(R.id.action_catalogFragment_to_listFragment)
+        }
+
         binding.textBrick.setOnClickListener {
             findNavController().navigate(R.id.action_catalogFragment_to_listFragment)
         }

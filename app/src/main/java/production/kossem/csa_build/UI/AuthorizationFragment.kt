@@ -88,7 +88,7 @@ class AuthorizationFragment : Fragment() {
 
     private fun saveUserId(userId: Int) {
         val sharedPreferences = activity?.getSharedPreferences("MyApp", Context.MODE_PRIVATE)
-        sharedPreferences?.edit()?.putInt("userId", userId)?.apply()
+        sharedPreferences?.edit()?.putInt("userid", userId)?.apply()
     }
 
     override fun onDestroyView() {
