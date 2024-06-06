@@ -77,7 +77,7 @@ class ListFragment : Fragment() {
 
     private fun getUserId(): Int {
         val sharedPreferences = activity?.getSharedPreferences("MyApp", Context.MODE_PRIVATE)
-        return sharedPreferences?.getInt("userId", 0) ?: 0
+        return sharedPreferences?.getInt("userid", 0) ?: 0
     }
 
     override fun onDestroyView() {

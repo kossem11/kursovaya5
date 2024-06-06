@@ -9,7 +9,7 @@
         android:id="@+id/editTextLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/n_name"
+        android:hint="@string/mail"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

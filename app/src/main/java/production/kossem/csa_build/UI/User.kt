@@ -1,4 +1,4 @@
-package production.kossem.csa_build.UI.Adapders
+package production.kossem.csa_build.UI
 
 data class User(
     val userid: Int,

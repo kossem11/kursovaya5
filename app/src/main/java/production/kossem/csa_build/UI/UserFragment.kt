@@ -16,7 +16,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import okhttp3.FormBody
 import okhttp3.Request
-import production.kossem.csa_build.UI.Adapders.User
 import production.kossem.csa_build.databinding.FragmentUserBinding
 
 class UserFragment : Fragment() {
